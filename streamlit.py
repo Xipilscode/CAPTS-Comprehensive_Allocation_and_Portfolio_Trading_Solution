@@ -7,14 +7,7 @@ import matplotlib.pyplot as plt
 import sys
 sys.path.append('utils')
 
-from utils.functions import fetch_asset_data
-from utils.functions import create_price_df  
-from utils.functions import calculate_log_returns
-from utils.functions import generate_random_weights
-from utils.functions import rebalance_weights
-from utils.functions import calculate_expected_returns
-from utils.functions import calculate_expected_volatility
-from utils.functions import calculate_sharpe_ratio
+
 
 # create the navigation menu
 def navigation():
