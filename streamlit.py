@@ -1,27 +1,29 @@
 # Import dependencies
 import streamlit as st
-from PIL import Image
-import datetime
-import pandas as pd
-import matplotlib.pyplot as plt
-import sys
-sys.path.append('utils')
-from ipywidgets import interactive, interact_manual, RadioButtons, HTML, HBox, VBox, Layout
-import yfinance as yf
-from PIL import Image
 import datetime
 import numpy as np
+from sklearn.cluster import KMeans
+from PIL import Image
+import matplotlib.pyplot as plt
+import pandas as pd
+import yfinance as yf
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 from sklearn.impute import SimpleImputer
 import pyfolio as pf
+from IPython.display import display, HTML
 import plotly.express as px
 import plotly.graph_objects as go
+import sys
+sys.path.append('utils')
+from ipywidgets import interactive, interact_manual, RadioButtons, HTML, HBox, VBox, Layout
+from PIL import Image
+import datetime
 import io
 import base64
+
 # Set display options for Pandas
-# pd.set_option('display.max_colwidth', None)
-# pd.set_option('expand_frame_repr', False)
+ 
 
 
 # create the navigation menu
@@ -35,6 +37,7 @@ def navigation():
         step_2()
     elif page == "Step 3 : GRID Bot":
         step_3()
+
 
 # Define home page container 
 def home():
