@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 sys.path.append('utils')
-# from IPython.display import display, HTML
+from IPython.display import display, HTML
 from ipywidgets import interactive, interact_manual, RadioButtons, HTML, HBox, VBox, Layout
 import yfinance as yf
 from PIL import Image
