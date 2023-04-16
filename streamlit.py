@@ -20,8 +20,8 @@ import plotly.graph_objects as go
 import io
 import base64
 # Set display options for Pandas
-pd.set_option('display.max_colwidth', None)
-pd.set_option('expand_frame_repr', False)
+# pd.set_option('display.max_colwidth', None)
+# pd.set_option('expand_frame_repr', False)
 
 
 # create the navigation menu
