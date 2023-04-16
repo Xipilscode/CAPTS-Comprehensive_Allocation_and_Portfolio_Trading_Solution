@@ -2,7 +2,6 @@
 
 
 Build a diversified optimal portfolio using k-means, PCA and  Monte Carlo Simulation on historical closing prices.
-<img width="1222" alt="image" src="https://user-images.githubusercontent.com/7315911/232337512-a9ed2381-8d6d-469b-b295-0e7238446190.png">
 
 Option 1:  Max Sharpe Ratio
 Option 2:  Minimum Volatility
