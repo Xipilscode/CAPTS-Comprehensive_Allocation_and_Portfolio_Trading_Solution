@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 sys.path.append('utils')
-from IPython.display import display, HTML
+from IPython.display import HTML
 from ipywidgets import interactive, interact_manual, RadioButtons, HTML, HBox, VBox, Layout
 import yfinance as yf
 from PIL import Image
@@ -41,7 +41,7 @@ def navigation():
 def home():
     with st.spinner("Loading Home page..."):
          # Header image 
-        img_header = Image.open('images/main_page_1.jpeg')
+        img_header = Image.open('/Users/lexx/Desktop/Github_Upload/CAPTS_Project/Capital_Allocation_Optimization/images/main_page_1.jpeg')
         st.image(img_header, width=None)
 
         # Header name of the project w/description
@@ -110,7 +110,7 @@ def home():
 def step_1():
     with st.spinner("Loading capital Allocation page..."):
         # Header image 
-        img_header = Image.open('images/main_page_2.jpeg')
+        img_header = Image.open('//Users/lexx/Desktop/Github_Upload/CAPTS_Project/Capital_Allocation_Optimization/images/main_page_2.jpeg')
         st.image(img_header, width=None)
 
         # Header name of Step 1  w/description
