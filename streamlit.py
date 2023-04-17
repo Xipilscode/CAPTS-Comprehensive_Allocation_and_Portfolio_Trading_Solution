@@ -2,18 +2,19 @@
 import streamlit as st
 import datetime
 import numpy as np
-from PIL import Image
-import matplotlib.pyplot as plt
 import pandas as pd
 import yfinance as yf
-from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
+from PIL import Image
+import sys
 from sklearn.cluster import KMeans
 from sklearn.impute import SimpleImputer
 import pyfolio as pf
+from sklearn.decomposition import PCA
 from IPython.display import display, HTML
 import plotly.express as px
 import plotly.graph_objects as go
-import sys
+
 sys.path.append('utils')
 from ipywidgets import interactive, interact_manual, RadioButtons, HTML, HBox, VBox, Layout
 from PIL import Image
