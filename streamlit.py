@@ -2,7 +2,6 @@
 import streamlit as st
 import datetime
 import numpy as np
-from sklearn.cluster import KMeans
 from PIL import Image
 import matplotlib.pyplot as plt
 import pandas as pd
