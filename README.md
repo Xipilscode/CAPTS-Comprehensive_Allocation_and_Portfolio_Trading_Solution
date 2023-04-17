@@ -21,13 +21,13 @@ Perform Principal Component Analysis (PCA) for dimensionality reduction and K-me
 12. Generate performance tear sheets: Create performance tear sheets for the Maximum Sharpe Ratio portfolio, Minimum Volatility portfolio, and benchmark portfolio. 
 Screenshots:
 ![Maximum Sharpe Ratio portfolio Tear Sheet](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/max_sharpe_ratio_portfolio.png)
-![Minimum Volatility portfolio Tear Sheet](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/max_sharpe_ratio_portfolio.png)
+![Minimum Volatility portfolio Tear Sheet](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/minimum_volatility_portfolio.png)
 ![Benchmark portfolio Tear Sheet](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/benchmark_portfolio.png)
 
 The next step for the development of this application is to choose between the Maximum Sharpe Ratio portfolio and Minimum Volatility portfolio and use it for algorithmic trading. The repository also includes code in development for a trading strategy based on Volume Exponential Moving Average (EMA) signals, which will be used to implement and backtest the chosen portfolio on the Alpaca paper trading platform.
 
 The trading algorithm will rebalance the portfolio weekly, with the potential for adjusting the rebalancing schedule as needed. The application is implemented using Streamlit, providing an interactive and user-friendly interface. 
-Screenshots of the Streamlit app can be found here:
+The Streamlit app can be found here:
 [CAPTS](https://xipilscode-capts-comprehensive-allocation-and--streamlit-qmh5et.streamlit.app/)
 ![Screenshots of the web application](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/web_page_shot1.png)
 
