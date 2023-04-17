@@ -14,6 +14,7 @@ from sklearn.decomposition import PCA
 from IPython.display import display, HTML
 import plotly.express as px
 import plotly.graph_objects as go
+import requests
 
 sys.path.append('utils')
 from ipywidgets import interactive, interact_manual, RadioButtons, HTML, HBox, VBox, Layout
