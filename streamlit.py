@@ -43,8 +43,9 @@ def navigation():
 def home():
     with st.spinner("Loading Home page..."):
          # Header image 
-        img_header = Image.open('https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/main_page_1.jpeg')
-        st.image(img_header, width=None)
+        image_url = 'https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/main_page_1.jpeg?raw=true'
+        response = requests.get(image_url)
+        img_header = Image.open(BytesIO(response.content))
 
         # Header name of the project w/description
         st.markdown(
