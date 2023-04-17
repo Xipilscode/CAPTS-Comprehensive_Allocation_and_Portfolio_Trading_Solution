@@ -7,6 +7,7 @@ This repository contains an application that utilizes Modern Portfolio Theory (M
 1. Selecting asset classes and tickers: Choose the assets and asset classes for analysis (crypto, stocks, commodities, and bonds).
 2. Data acquisition: Download historical price data for the chosen assets from Yahoo Finance.
 3. Data preprocessing: Clean and preprocess the data to calculate returns and prepare it for further analysis.
+
 4. ![PCA and K-means clustering:](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/ml_algorithms.png)
 Perform Principal Component Analysis (PCA) for dimensionality reduction and K-means clustering for asset classification. The application includes an automated function that leverages the elbow method to identify the optimal number of clusters for K-means clustering. This automated approach streamlines the clustering process and enhances the asset classification efficiency. 
 ![Automated clustering function](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/automated_function9%20PM.png)
@@ -28,7 +29,7 @@ The next step for the development of this application is to choose between the M
 
 The trading algorithm will rebalance the portfolio weekly, with the potential for adjusting the rebalancing schedule as needed. The application is implemented using Streamlit, providing an interactive and user-friendly interface. 
 The Streamlit app can be found here:
-[CAPTS](https://xipilscode-capts-comprehensive-allocation-and--streamlit-qmh5et.streamlit.app/)
+[CAPTS](https://xipilscode-capts-comprehensive-allocation-and--streamlit-1966nx.streamlit.app/)
 ![Screenshots of the web application](https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/web_page_shot1.png)
 
 ## Technologies
