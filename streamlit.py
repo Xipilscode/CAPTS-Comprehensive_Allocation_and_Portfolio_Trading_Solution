@@ -220,18 +220,30 @@ def step_1():
             #st.write(data.head(10))
 
             
-            # Calculate logarithmic returns for each asset
-            def calculate_log_returns(df):
-                """
-                Calculate the logarithmic returns of an asset.
-                If the 'Adj Close' column is present, use it for calculating log. returns.
-                Otherwise use the 'Close' column
-                """
+            # # Calculate logarithmic returns for each asset
+            # def calculate_log_returns(df):
+            #     """
+            #     Calculate the logarithmic returns of an asset.
+            #     If the 'Adj Close' column is present, use it for calculating log. returns.
+            #     Otherwise use the 'Close' column
+            #     """
            
-                if 'Adj Close' in df.columns:
-                    return np.log(1 + df['Adj Close'].pct_change())    
-                else:
-                    return np.log(1 + df['Close'].pct_change())
+            #     if 'Adj Close' in df.columns:
+            #         return np.log(1 + df['Adj Close'].pct_change())    
+            #     else:
+            #         return np.log(1 + df['Close'].pct_change())
+            def calculate_log_returns(df):
+               try:
+                   if 'Adj_Close' in df.columns:
+                       return np.log(1 + df['Adj_Close'].pct_change())
+                   elif 'Close' in df.columns:
+                       return np.log(1 + df['Close'].pct_change())
+                   else:
+                       st.error("Neither 'Adj_Close' nor 'Close' column found in DataFrame")
+                       return pd.Series()
+               except Exception as e:
+                   st.error(f"Error in calculate_log_returns: {e}")
+                   return pd.Series()
                 
 
             # data.groupby(['Asset Class', 'Ticker'], group_keys=False).apply(o_c_pct_change)
