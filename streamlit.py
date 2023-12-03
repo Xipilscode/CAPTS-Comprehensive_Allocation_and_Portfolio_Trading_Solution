@@ -211,9 +211,13 @@ def step_1():
             #Remane column
             data = data.rename(columns={"Adj Close": "Adj_Close"})
 
+            # Debugging lines: Print DataFrame structure
+            st.write("DataFrame columns:", data.columns)
+            st.write("First few rows of the DataFrame:", data.head())
+
             # Display the loaded data
-            st.write("Loaded data:")
-            st.write(data.head(10))
+            #st.write("Loaded data:")
+            #st.write(data.head(10))
 
             
             # Calculate logarithmic returns for each asset
