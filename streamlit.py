@@ -185,7 +185,7 @@ def step_1():
                 for ticker in tickers:
                     # Download historical data for each ticker within the specified date range
                     historical_data = yf.download(ticker, start=start_date, end=end_date)
-                    historical_data['Asset Class'] = asset_class # Add a column indicating the asset class
+                    historical_data['Asset_Class'] = asset_class # Add a column indicating the asset class
                     historical_data['Ticker'] = ticker # Add a column indicating the ticker
                     data_frames.append(historical_data) # Append the data frame to the list
 
@@ -206,7 +206,7 @@ def step_1():
             data = fetch_asset_data(api_pull, selected_start_date, selected_end_date)           
             
             #Reset the index of a DataFrame and set a new index with multiple columns
-            data = data.reset_index().set_index(['Asset Class', 'Ticker','Date'])
+            data = data.reset_index().set_index(['Asset_Class', 'Ticker','Date'])
             
             #Remane column
             data = data.rename(columns={"Adj Close": "Adj_Close"})
