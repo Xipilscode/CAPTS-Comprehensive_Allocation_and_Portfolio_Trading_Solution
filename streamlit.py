@@ -44,7 +44,7 @@ def navigation():
 def home():
     with st.spinner("Loading Home page..."):
          # Header image 
-        img_header = Image.open('images/main_page_1.jpeg')
+        img_header = Image.open('/Users/lexx/Desktop/Github_Upload/CAPTS_Project/Capital_Allocation_Optimization/images/main_page_1.jpeg')
         st.image(img_header, width=None)
 
         # Header name of the project w/description
@@ -113,7 +113,7 @@ def home():
 def step_1():
     with st.spinner("Loading capital Allocation page..."):
         # Header image 
-        img_header = Image.open('images/main_page_2.jpeg')
+        img_header = Image.open('//Users/lexx/Desktop/Github_Upload/CAPTS_Project/Capital_Allocation_Optimization/images/main_page_2.jpeg')
         st.image(img_header, width=None)
 
         # Header name of Step 1  w/description
@@ -185,7 +185,7 @@ def step_1():
                 for ticker in tickers:
                     # Download historical data for each ticker within the specified date range
                     historical_data = yf.download(ticker, start=start_date, end=end_date)
-                    historical_data['Asset_Class'] = asset_class # Add a column indicating the asset class
+                    historical_data['Asset Class'] = asset_class # Add a column indicating the asset class
                     historical_data['Ticker'] = ticker # Add a column indicating the ticker
                     data_frames.append(historical_data) # Append the data frame to the list
 
@@ -206,44 +206,28 @@ def step_1():
             data = fetch_asset_data(api_pull, selected_start_date, selected_end_date)           
             
             #Reset the index of a DataFrame and set a new index with multiple columns
-            data = data.reset_index().set_index(['Asset_Class', 'Ticker','Date'])
+            data = data.reset_index().set_index(['Asset Class', 'Ticker','Date'])
             
             #Remane column
             data = data.rename(columns={"Adj Close": "Adj_Close"})
 
-            # Debugging lines: Print DataFrame structure
-            st.write("DataFrame columns:", data.columns)
-            st.write("First few rows of the DataFrame:", data.head())
-
             # Display the loaded data
-            #st.write("Loaded data:")
-            #st.write(data.head(10))
+            st.write("Loaded data:")
+            st.write(data.head(10))
 
             
-            # # Calculate logarithmic returns for each asset
-            # def calculate_log_returns(df):
-            #     """
-            #     Calculate the logarithmic returns of an asset.
-            #     If the 'Adj Close' column is present, use it for calculating log. returns.
-            #     Otherwise use the 'Close' column
-            #     """
-           
-            #     if 'Adj Close' in df.columns:
-            #         return np.log(1 + df['Adj Close'].pct_change())    
-            #     else:
-            #         return np.log(1 + df['Close'].pct_change())
+            # Calculate logarithmic returns for each asset
             def calculate_log_returns(df):
-               try:
-                   if 'Adj_Close' in df.columns:
-                       return np.log(1 + df['Adj_Close'].pct_change())
-                   elif 'Close' in df.columns:
-                       return np.log(1 + df['Close'].pct_change())
-                   else:
-                       st.error("Neither 'Adj_Close' nor 'Close' column found in DataFrame")
-                       return pd.Series()
-               except Exception as e:
-                   st.error(f"Error in calculate_log_returns: {e}")
-                   return pd.Series()
+                """
+                Calculate the logarithmic returns of an asset.
+                If the 'Adj Close' column is present, use it for calculating log. returns.
+                Otherwise use the 'Close' column
+                """
+           
+                if 'Adj Close' in df.columns:
+                    return np.log(1 + df['Adj Close'].pct_change())    
+                else:
+                    return np.log(1 + df['Close'].pct_change())
                 
 
             # data.groupby(['Asset Class', 'Ticker'], group_keys=False).apply(o_c_pct_change)
