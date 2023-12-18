@@ -44,7 +44,7 @@ def navigation():
 def home():
     with st.spinner("Loading Home page..."):
          # Header image 
-        img_header = Image.open('/Users/lexx/Desktop/Github_Upload/CAPTS_Project/Capital_Allocation_Optimization/images/main_page_1.jpeg')
+        img_header = Image.open('https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/main_page_1.jpeg')
         st.image(img_header, width=None)
 
         # Header name of the project w/description
@@ -113,7 +113,7 @@ def home():
 def step_1():
     with st.spinner("Loading capital Allocation page..."):
         # Header image 
-        img_header = Image.open('//Users/lexx/Desktop/Github_Upload/CAPTS_Project/Capital_Allocation_Optimization/images/main_page_2.jpeg')
+        img_header = Image.open('https://github.com/Xipilscode/CAPTS-Comprehensive_Allocation_and_Portfolio_Trading_Solution/blob/main/images/main_page_2.jpeg')
         st.image(img_header, width=None)
 
         # Header name of Step 1  w/description
