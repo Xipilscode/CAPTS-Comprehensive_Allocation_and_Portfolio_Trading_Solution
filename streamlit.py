@@ -113,7 +113,7 @@ def home():
 def step_1():
     with st.spinner("Loading capital Allocation page..."):
         # Header image 
-        img_header = Image.open('/images/main_page_2.jpeg')
+        img_header = Image.open('images/main_page_2.jpeg')
         st.image(img_header, width=None)
 
         # Header name of Step 1  w/description
