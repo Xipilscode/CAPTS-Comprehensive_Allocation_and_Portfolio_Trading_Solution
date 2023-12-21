@@ -231,7 +231,7 @@ def step_1():
                 
 
             # data.groupby(['Asset Class', 'Ticker'], group_keys=False).apply(o_c_pct_change)
-            data["Returns"] = data.groupby(['Asset Class', 'Ticker'], group_keys=False).transform(calculate_log_returns)
+            data["Returns"] = data.groupby(['Asset Class', 'Ticker'], group_keys=False).apply(calculate_log_returns)
 
 
 
